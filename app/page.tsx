@@ -1,18 +1,11 @@
-import Nav from "@/components/Nav";
-import { Button } from "@/components/ui/button";
+import Home from "@/components/pages/Home";
+import Nav from "@/components/ui/Nav";
 
-export default function Home() {
+export default function RootPage() {
   return (
-    <main className="flex flex-col gap-12 p-24">
+    <main className="flex flex-col gap-12 px-12 py-6 md:px-24 lg:px-24 lg:py-12">
       <Nav />
-      <section className="flex flex-col justify-center text-center">
-        <h1 className="text-4xl font-bold">Learning shadcn</h1>
-        <p className="text-2xl">Improving my styling with shadcn & themes</p>
-      </section>
-      <div className="flex flex-row gap-2 justify-center">
-        <Button variant={"secondary"}>Learn with me</Button>
-        <Button>Learn for yourself</Button>
-      </div>
+      <Home />
     </main>
   );
 }
