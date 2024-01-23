@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 
 export default function Home() {
@@ -9,7 +10,9 @@ export default function Home() {
         overlapping or multiple meetings in one room at the same time.
       </p>
       <div className="flex flex-row gap-2 justify-center">
-        <Button variant={"secondary"}>View Walkthrough</Button>
+        <Button variant={"secondary"}>
+          <Link href="/walkthrough/">View Walkthrough</Link>
+        </Button>
         <Button>Try it yourself</Button>
       </div>
     </section>
