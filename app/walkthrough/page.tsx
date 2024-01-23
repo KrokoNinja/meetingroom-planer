@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Walkthrough() {
   return (
@@ -11,7 +12,14 @@ export default function Walkthrough() {
         In the future there will be walkthroughs of basic functionality of the
         application here for the user to see how things are done.
       </p>
-      <Button>Go back Home</Button>
+      <div className="flex-row">
+        <Button className="mr-6">
+          <Link href="/dashboard/">Go to Dashboard</Link>
+        </Button>
+        <Button variant={"secondary"}>
+          <Link href="/">Go back Home</Link>
+        </Button>
+      </div>
     </div>
   );
 }
