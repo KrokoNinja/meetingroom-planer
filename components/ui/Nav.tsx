@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { ModeToggle } from "../features/ModeToggle";
 import { Button } from "./button";
 import { useToast } from "./use-toast";
@@ -7,10 +8,15 @@ import { useToast } from "./use-toast";
 export default function Nav() {
   const { toast } = useToast();
 
+  //TODO: Change Nav -> remove ul and li and change styling
+
   return (
     <nav className="w-full">
       <ul className="flex flex-row-reverse md:flex-row items-center justify-between">
         <li>
+          <Link href="/login">
+            <Button variant="secondary">Login</Button>
+          </Link>
           <Button
             onClick={() => {
               toast({
@@ -20,7 +26,7 @@ export default function Nav() {
               });
             }}
           >
-            Login
+            Get started
           </Button>
         </li>
         <li>
